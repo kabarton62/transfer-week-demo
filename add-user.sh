@@ -7,6 +7,7 @@ cown="/usr/bin/sudo /usr/bin/chown"
 ruser="/usr/bin/sudo /usr/sbin/runuser"
 for i in {4401..4430}
 do
+  user="p$i"
   $uadd -p $(openssl passwd -1 $pword) $user
   $mdir /home/$user
   $cown $user:$user /home/$user
