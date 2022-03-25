@@ -16,4 +16,5 @@ do
   $ruser -l $user -c "/usr/bin/cp $user.pub authorized_keys"
   /usr/bin/sudo /usr/bin/cp /home/$user/.ssh/$user /var/www/html/$user
 done
+/usr/bin/sudo /usr/bin/chmod 644 /var/www/html/*
 ls -l /var/www/html/
