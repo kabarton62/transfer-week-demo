@@ -11,5 +11,8 @@ a="/usr/bin/sudo /usr/bin/apt"
 $d stop mutillidae  && $d rm mutillidae
 # Run citizenstig/nowasp and bind TCP 80 on the container to TCP 8080 on the instance.
 $d run -d -p 8080:80 -p 3306:3306 --name mutillidae -e MYSQL_PASS="Chang3ME!" citizenstig/nowasp
+# Install wget in the container
+$d exec -it mutillidae apt update
+$d exec -it mutillidae apt install wget -y
 $d ps
 # Browse to gcp-instance:8080. You will be redirected to a page to install the database. Clink the link to install the db.
