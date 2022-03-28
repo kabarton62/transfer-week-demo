@@ -9,7 +9,7 @@
  
 **Lab Set-up**
   1. Deploy two instances in GCP, such as TARGET and SHELL-BOX
-  2. Prepare the firewall to allow TCP 80 & 8080 from whatever sources you trust to SHELL-BOX and TARGET. DO NOT EXPOSE HOSTS TO UNTRUSTED SOURCES! TARGET has Mutillidae on TCP 8080 and SHELL-BOX has ssh-rsa private keys in the web-root on TCP 80. This is a pen-testing lab, and an easy one at that, don't expose it to the Internet.
+  2. Prepare the firewall to allow TCP 80 & 8080 from whatever sources you trust to SHELL-BOX and TARGET. **DO NOT EXPOSE HOSTS TO UNTRUSTED SOURCES!** TARGET has Mutillidae on TCP 8080 and SHELL-BOX has ssh-rsa private keys in the web-root on TCP 80. This is a pen-testing lab, and an easy one at that, don't expose it to the Internet.
   3. On SHELL-BOX, install python3, apache2, nmap, net-tools and netcat.
   4. On SHELL-BOX, run **add-user.sh** to add 30 users. Usernames reflect the TCP port each user can use. Done just to prevent students from attempting to use the same port. _If something goes wrong, delete users with **deluser.sh**_.
   5. After user's login to SHELL-BOX, they can each run **revshell-gen.sh** to generate a reverse shell. This could be done manually, but hopefully the script avoids errors in creating the reverse shells.
