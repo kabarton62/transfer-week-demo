@@ -3,7 +3,7 @@
   1. **docker-install.sh**: Install Docker engine on Ubuntu
   2. **add-user.sh**:       Add users on an Ubuntu server and distribute private keys (in the worst way possible)
   3. **mutillidae.sh**:     Deploy a Mutillidae Docker container
-  4. **ssh.ps1**:           Start a SSH shell using a Windows PowerShell script (so there's not a lot of time spent troubleshooting failed SSH attempts). The script downloads an SSH-RSA private key and uses that key to ssh into shell-box.
+  4. **ssh-login.bat**:           Start a SSH shell using a Windows batch script (so there's not a lot of time spent troubleshooting failed SSH attempts). The script downloads an SSH-RSA private key and uses that key to ssh into shell-box.
   5. **deluser.sh**:        Delete all those users we added and their ssh-rsa keys
   6. **revshell-gen.sh**:   Used to generate reverse shells for each student, assuming the usernames are p4401 through p4430. Obviously won't work if the username  doesn't fit this format.
  
@@ -16,4 +16,4 @@
   6. On TARGET, install net-tools, apache2, & I guess that's it.
   7. On TARGET, run **docker-install.sh** to install Docker Engine.
   8. On TARGET, run **mutillidae.sh** to start the Mutillidae container and expose it to TCP 8080 on TARGET.
-  9. Put a copy on ssh.ps1 on each Windows workstation that students would use to participate in the demo. Students run ssh.ps1 to a) download the ssh-rsa private key and 2) connect to the SHELL-BOX. Run the PowerShell script as **.\ssh.ps1 username SHELL-BOX-IP**. Each student should be assigned a unique user, such as p4401.
+  9. Put a copy on ssh.ps1 on each Windows workstation that students would use to participate in the demo. Students run ssh.ps1 to a) download the ssh-rsa private key and 2) connect to the SHELL-BOX. Run the batch script as **.\ssh-login.bat username SHELL-BOX-IP**. Each student should be assigned a unique user, such as p4401.
