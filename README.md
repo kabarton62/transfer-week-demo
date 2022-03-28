@@ -16,4 +16,4 @@ Lab Set-up
   6. On TARGET, install net-tools, apache2, & I guess that's it.
   7. On TARGET, run **docker-install.sh** to install Docker Engine.
   8. On TARGET, run **mutillidae.sh** to start the Mutillidae container and expose it to TCP 8080 on TARGET.
-  9. Put a copy on ssh.ps1 on each Windows workstation that students would use to participate in the demo. Students run ssh.ps1 to a) download the ssh-rsa private key and 2) connect to the SHELL-BOX. Run the PowerShell script as **.\ssh.ps1 <username> <SHELL-BOX IP>**. Each student should be assigned a unique user, such as p4401.
+  9. Put a copy on ssh.ps1 on each Windows workstation that students would use to participate in the demo. Students run ssh.ps1 to a) download the ssh-rsa private key and 2) connect to the SHELL-BOX. Run the PowerShell script as **.\ssh.ps1 username SHELL-BOX-IP**. Each student should be assigned a unique user, such as p4401.
